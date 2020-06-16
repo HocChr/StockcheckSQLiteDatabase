@@ -5,7 +5,7 @@ using System;
 
 namespace StockcheckDatabase
 {
-    public static class SQLiteDatabaseAccess
+    internal static class SQLiteDatabaseAccess
     {
         public static DataTable LoadDataTable(string tableName)
         {
@@ -80,7 +80,6 @@ namespace StockcheckDatabase
             Execute(string.Format("DELETE FROM {0}", table.TableName));
 
             SQLiteConnection sQLiteConnection = new SQLiteConnection("Data Source=" + "C:\\Users\\chochheim\\Documents\\CSharpProjects\\StockcheckSQLiteDatabase\\bin\\Debug\\netcoreapp3.1\\database\\Deutschland.db");
-
             sQLiteConnection.Open();
             try
             {
